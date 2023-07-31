@@ -1,7 +1,9 @@
-export const LeassonOne = () => {
+const LeassonOne = () => {
   return (
     <>
       <h1>hello world</h1>
     </>
   )
 }
+
+export default LeassonOne

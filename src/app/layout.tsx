@@ -81,44 +81,44 @@ const RootLayout = () => {
   }
 
   return (
-    <>
-      <GlobalStyle />
-      <html lang="en">
-        <meta name="title" content={metadata.title} />
-        <meta name="description" content={metadata.description} />
-        <body>
-          <main>
-            <Grid container spacing={3} p={2}>
-              <Grid item xs={12}>
-                <Paper sx={paperRootStyle}>
-                  <Typography variant="h5">
-                    Examples of React Hooks Form
-                  </Typography>
-                </Paper>
-              </Grid>
-              <Grid item xs={12}>
-                <Paper sx={paperRootStyle}>
-                  <TreeView
-                    aria-label="rich object"
-                    defaultCollapseIcon={<Iconify icon="mdi:chevron-down" />}
-                    defaultExpanded={['root']}
-                    defaultExpandIcon={<Iconify icon="mdi:chevron-right" />}
-                  >
-                    {renderTree(data)}
-                  </TreeView>
-                </Paper>
-              </Grid>
+    <html lang="en">
+      <meta name="title" content={metadata.title} />
+      <meta name="description" content={metadata.description} />
 
-              {selectedNode && (
-                <Grid item xs={12}>
-                  <Paper sx={paperRootStyle}>{selectedNode.element}</Paper>
-                </Grid>
-              )}
+      <GlobalStyle />
+
+      <body>
+        <main>
+          <Grid container spacing={3} p={2}>
+            <Grid item xs={12}>
+              <Paper sx={paperRootStyle}>
+                <Typography variant="h5">
+                  Examples of React Hooks Form
+                </Typography>
+              </Paper>
             </Grid>
-          </main>
-        </body>
-      </html>
-    </>
+            <Grid item xs={12}>
+              <Paper sx={paperRootStyle}>
+                <TreeView
+                  aria-label="rich object"
+                  defaultCollapseIcon={<Iconify icon="mdi:chevron-down" />}
+                  defaultExpanded={['root']}
+                  defaultExpandIcon={<Iconify icon="mdi:chevron-right" />}
+                >
+                  {renderTree(data)}
+                </TreeView>
+              </Paper>
+            </Grid>
+
+            {selectedNode && (
+              <Grid item xs={12}>
+                <Paper sx={paperRootStyle}>{selectedNode.element}</Paper>
+              </Grid>
+            )}
+          </Grid>
+        </main>
+      </body>
+    </html>
   )
 }
 
